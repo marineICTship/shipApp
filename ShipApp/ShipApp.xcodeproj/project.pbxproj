@@ -297,6 +297,7 @@
 			);
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		9C5661D6193C566000D9B9E9 /* Main_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
