@@ -23,7 +23,25 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ltu-fN-Txe">
                                 <rect key="frame" x="0.0" y="30" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items/>
+                                <items>
+                                    <barButtonItem title="検索" id="jf2-dX-jcc">
+                                        <connections>
+                                            <action selector="search:" destination="BYZ-38-t0r" id="QGZ-Dy-Hns"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="717" style="plain" systemItem="fixedSpace" id="6Vd-TB-XQ6"/>
+                                    <barButtonItem title="船舶一覧" id="FYS-R3-mo5">
+                                        <connections>
+                                            <action selector="shipSummary:" destination="BYZ-38-t0r" id="9HC-gr-XZq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="91" style="plain" systemItem="fixedSpace" id="OLa-sv-ubD"/>
+                                    <barButtonItem title="メニュー" id="Em1-Li-r13">
+                                        <connections>
+                                            <action selector="menu:" destination="BYZ-38-t0r" id="rHy-tT-VDo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -33,6 +51,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
+                        <outlet property="Toolbar" destination="ltu-fN-Txe" id="JvW-qw-3xa"/>
                         <outlet property="myMap" destination="ADg-3V-fO9" id="dKy-E1-ZOb"/>
                     </connections>
                 </viewController>
