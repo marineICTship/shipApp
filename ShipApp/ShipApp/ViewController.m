@@ -37,6 +37,8 @@
 - (IBAction)MenuButton:(id)sender {
 }
 - (IBAction)search:(id)sender {
+    [self performSegueWithIdentifier:@"s" sender:self];
+    
 }
 
 - (IBAction)shipSummary:(id)sender {
