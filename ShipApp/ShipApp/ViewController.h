@@ -11,7 +11,10 @@
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet MKMapView *myMap;
-@property (weak, nonatomic) IBOutlet UIToolbar *myToolbar;
-- (IBAction)MenuButton:(id)sender;
+- (IBAction)search:(id)sender;
+- (IBAction)shipSummary:(id)sender;
+- (IBAction)menu:(id)sender;
+@property (weak, nonatomic) IBOutlet UIToolbar *Toolbar;
+
 
 @end

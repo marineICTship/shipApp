@@ -36,4 +36,12 @@
 
 - (IBAction)MenuButton:(id)sender {
 }
+- (IBAction)search:(id)sender {
+}
+
+- (IBAction)shipSummary:(id)sender {
+}
+
+- (IBAction)menu:(id)sender {
+}
 @end
