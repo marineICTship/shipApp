@@ -23,6 +23,7 @@
 		9C5661EE193C566000D9B9E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C5661EC193C566000D9B9E9 /* InfoPlist.strings */; };
 		9C5661F0193C566000D9B9E9 /* ShipAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5661EF193C566000D9B9E9 /* ShipAppTests.m */; };
 		9C5661FA193C56F700D9B9E9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5661F9193C56F700D9B9E9 /* MapKit.framework */; };
+		9C6961A01949718D00D9FA25 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69619F1949718D00D9FA25 /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		9C5661ED193C566000D9B9E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C5661EF193C566000D9B9E9 /* ShipAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShipAppTests.m; sourceTree = "<group>"; };
 		9C5661F9193C56F700D9B9E9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9C69619E1949718D00D9FA25 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		9C69619F1949718D00D9FA25 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				9C5661DA193C566000D9B9E9 /* ViewController.m */,
 				9C5661DC193C566000D9B9E9 /* Images.xcassets */,
 				9C5661C8193C566000D9B9E9 /* Supporting Files */,
+				9C69619E1949718D00D9FA25 /* SearchViewController.h */,
+				9C69619F1949718D00D9FA25 /* SearchViewController.m */,
 			);
 			path = ShipApp;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			files = (
 				9C5661DB193C566000D9B9E9 /* ViewController.m in Sources */,
 				9C5661D2193C566000D9B9E9 /* AppDelegate.m in Sources */,
+				9C6961A01949718D00D9FA25 /* SearchViewController.m in Sources */,
 				9C5661CE193C566000D9B9E9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
