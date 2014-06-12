@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Activity View Controller2 - ViewController2-->
+        <!--Search View Controller - ViewController2-->
         <scene sceneID="LXe-UP-1tK">
             <objects>
-                <viewController title="ViewController2" id="ob1-rv-3f7" customClass="UIActivityViewController2" sceneMemberID="viewController">
+                <viewController title="ViewController2" id="ob1-rv-3f7" customClass="SearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PUw-ue-1Ib"/>
                         <viewControllerLayoutGuide type="bottom" id="o4z-AD-a2M"/>
@@ -20,7 +20,12 @@
                                 <rect key="frame" x="0.0" y="30" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="戻る" id="wWT-lZ-Ojg"/>
+                                    <barButtonItem title="戻る" id="wWT-lZ-Ojg">
+                                        <connections>
+                                            <action selector="returnButton:" destination="ob1-rv-3f7" id="8an-96-eRf"/>
+                                            <segue destination="BYZ-38-t0r" kind="modal" id="g0j-DM-gaa"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -31,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCk-0K-Bn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1028" y="-348"/>
+            <point key="canvasLocation" x="-1220" y="-230"/>
         </scene>
         <!--View Controller - ViewController-->
         <scene sceneID="tne-QT-ifu">
