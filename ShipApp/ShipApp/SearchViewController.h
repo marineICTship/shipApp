@@ -10,5 +10,7 @@
 
 @interface SearchViewController : UIViewController
 - (IBAction)returnButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+- (IBAction)searchButton:(id)sender;
 
 @end

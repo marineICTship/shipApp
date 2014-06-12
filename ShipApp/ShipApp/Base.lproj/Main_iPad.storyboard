@@ -22,21 +22,46 @@
                                 <items>
                                     <barButtonItem title="戻る" id="wWT-lZ-Ojg">
                                         <connections>
-                                            <action selector="returnButton:" destination="ob1-rv-3f7" id="8an-96-eRf"/>
+                                            <action selector="returnButton:" destination="ob1-rv-3f7" id="XaJ-n0-9X3"/>
                                             <segue destination="BYZ-38-t0r" kind="modal" id="g0j-DM-gaa"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z3w-xq-hZ9">
+                                <rect key="frame" x="131" y="106" width="790" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="船舶名：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4O-JW-mJN">
+                                <rect key="frame" x="20" y="100" width="118" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mne-Kd-cwH">
+                                <rect key="frame" x="952" y="113" width="46" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="検索">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButton:" destination="ob1-rv-3f7" eventType="touchUpInside" id="8yq-wE-hJe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Z3w-xq-hZ9" id="2Ks-Tv-lRR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCk-0K-Bn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1220" y="-230"/>
+            <point key="canvasLocation" x="-1220" y="-66"/>
         </scene>
         <!--View Controller - ViewController-->
         <scene sceneID="tne-QT-ifu">
