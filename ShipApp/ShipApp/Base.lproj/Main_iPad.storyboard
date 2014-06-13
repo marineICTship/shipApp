@@ -100,6 +100,7 @@
                                     <barButtonItem title="メニュー" id="Em1-Li-r13">
                                         <connections>
                                             <action selector="menu:" destination="BYZ-38-t0r" id="rHy-tT-VDo"/>
+                                            <segue destination="fMZ-bg-Khf" kind="modal" id="aVZ-tP-vSr"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -119,6 +120,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-416" y="-324"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sgH-o5-kpJ">
+            <objects>
+                <viewController id="fMZ-bg-Khf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Km4-A1-F4K"/>
+                        <viewControllerLayoutGuide type="bottom" id="pbS-NQ-gCK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nyc-nJ-VQH">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TYi-A4-vs7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="-973"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Do0-LM-4P3">
@@ -148,7 +169,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61a-DM-chw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="704" y="236"/>
+            <point key="canvasLocation" x="832" y="236"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
