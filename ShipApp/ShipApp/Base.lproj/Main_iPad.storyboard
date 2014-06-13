@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="-416" y="-324"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="sgH-o5-kpJ">
             <objects>
-                <viewController id="fMZ-bg-Khf" sceneMemberID="viewController">
+                <viewController id="fMZ-bg-Khf" customClass="MenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Km4-A1-F4K"/>
                         <viewControllerLayoutGuide type="bottom" id="pbS-NQ-gCK"/>
@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="892" y="-973"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Ship Summary Table View Controller-->
         <scene sceneID="Do0-LM-4P3">
             <objects>
-                <tableViewController id="VpE-TV-Yrw" sceneMemberID="viewController">
+                <tableViewController id="VpE-TV-Yrw" customClass="ShipSummaryTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3Ve-vn-jyg">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
