@@ -24,6 +24,10 @@
 		9C5661F0193C566000D9B9E9 /* ShipAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5661EF193C566000D9B9E9 /* ShipAppTests.m */; };
 		9C5661FA193C56F700D9B9E9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5661F9193C56F700D9B9E9 /* MapKit.framework */; };
 		9C6961A01949718D00D9FA25 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69619F1949718D00D9FA25 /* SearchViewController.m */; };
+		9C6961A6194ABEBD00D9FA25 /* ShipSummaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6961A5194ABEBD00D9FA25 /* ShipSummaryTableViewController.m */; };
+		9C6961A9194ABF4700D9FA25 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6961A8194ABF4700D9FA25 /* MenuViewController.m */; };
+		9C6961AC194B0AE900D9FA25 /* ship_icon_000.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6961AA194B0AE900D9FA25 /* ship_icon_000.png */; };
+		9C6961AD194B0AE900D9FA25 /* ship_icon_152.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6961AB194B0AE900D9FA25 /* ship_icon_152.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,12 @@
 		9C5661F9193C56F700D9B9E9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9C69619E1949718D00D9FA25 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		9C69619F1949718D00D9FA25 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		9C6961A4194ABEBD00D9FA25 /* ShipSummaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipSummaryTableViewController.h; sourceTree = "<group>"; };
+		9C6961A5194ABEBD00D9FA25 /* ShipSummaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShipSummaryTableViewController.m; sourceTree = "<group>"; };
+		9C6961A7194ABF4700D9FA25 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		9C6961A8194ABF4700D9FA25 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		9C6961AA194B0AE900D9FA25 /* ship_icon_000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship_icon_000.png; sourceTree = "<group>"; };
+		9C6961AB194B0AE900D9FA25 /* ship_icon_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship_icon_152.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +131,8 @@
 		9C5661C7193C566000D9B9E9 /* ShipApp */ = {
 			isa = PBXGroup;
 			children = (
+				9C6961AA194B0AE900D9FA25 /* ship_icon_000.png */,
+				9C6961AB194B0AE900D9FA25 /* ship_icon_152.png */,
 				9C5661D0193C566000D9B9E9 /* AppDelegate.h */,
 				9C5661D1193C566000D9B9E9 /* AppDelegate.m */,
 				9C5661D3193C566000D9B9E9 /* Main_iPhone.storyboard */,
@@ -131,6 +143,10 @@
 				9C5661C8193C566000D9B9E9 /* Supporting Files */,
 				9C69619E1949718D00D9FA25 /* SearchViewController.h */,
 				9C69619F1949718D00D9FA25 /* SearchViewController.m */,
+				9C6961A4194ABEBD00D9FA25 /* ShipSummaryTableViewController.h */,
+				9C6961A5194ABEBD00D9FA25 /* ShipSummaryTableViewController.m */,
+				9C6961A7194ABF4700D9FA25 /* MenuViewController.h */,
+				9C6961A8194ABF4700D9FA25 /* MenuViewController.m */,
 			);
 			path = ShipApp;
 			sourceTree = "<group>";
@@ -241,6 +257,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C5661D8193C566000D9B9E9 /* Main_iPad.storyboard in Resources */,
+				9C6961AD194B0AE900D9FA25 /* ship_icon_152.png in Resources */,
+				9C6961AC194B0AE900D9FA25 /* ship_icon_000.png in Resources */,
 				9C5661DD193C566000D9B9E9 /* Images.xcassets in Resources */,
 				9C5661D5193C566000D9B9E9 /* Main_iPhone.storyboard in Resources */,
 				9C5661CC193C566000D9B9E9 /* InfoPlist.strings in Resources */,
@@ -263,7 +281,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C5661DB193C566000D9B9E9 /* ViewController.m in Sources */,
+				9C6961A9194ABF4700D9FA25 /* MenuViewController.m in Sources */,
 				9C5661D2193C566000D9B9E9 /* AppDelegate.m in Sources */,
+				9C6961A6194ABEBD00D9FA25 /* ShipSummaryTableViewController.m in Sources */,
 				9C6961A01949718D00D9FA25 /* SearchViewController.m in Sources */,
 				9C5661CE193C566000D9B9E9 /* main.m in Sources */,
 			);
