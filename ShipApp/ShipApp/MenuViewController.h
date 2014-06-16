@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface MenuViewController : UIViewController
 - (IBAction)MRButton:(id)sender;
