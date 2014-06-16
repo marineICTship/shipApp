@@ -13,6 +13,7 @@
 @end
 
 @implementation MenuViewController
+@synthesize Map2;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +28,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    MKCoordinateRegion region = Map2.region;
+    region.center.latitude = 34.551246;
+    region.center.longitude = 135.188034;
+    region.span.latitudeDelta = 0.5;
+    region.span.longitudeDelta = 0.5;
+    [Map2 setRegion:region animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

@@ -11,5 +11,6 @@
 
 @interface MenuViewController : UIViewController
 - (IBAction)MRButton:(id)sender;
+@property (weak, nonatomic) IBOutlet MKMapView *Map2;
 
 @end
