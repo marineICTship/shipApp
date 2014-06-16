@@ -105,6 +105,14 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ship_icon_000.png" translatesAutoresizingMaskIntoConstraints="NO" id="6J1-3c-vHG">
+                                <rect key="frame" x="474" y="413" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ship_icon_152.png" translatesAutoresizingMaskIntoConstraints="NO" id="B6E-Rc-KsW">
+                                <rect key="frame" x="650" y="229" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -132,6 +140,20 @@
                     <view key="view" contentMode="scaleToFill" id="Nyc-nJ-VQH">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Gl-GQ-r2l">
+                                <rect key="frame" x="0.0" y="30" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="戻る" id="rah-ia-Rb2">
+                                        <connections>
+                                            <action selector="MRButton:" destination="fMZ-bg-Khf" id="Z9b-IT-X9F"/>
+                                            <segue destination="BYZ-38-t0r" kind="modal" id="EMN-MY-mwM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -157,6 +179,13 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V0i-zk-p3M" id="Nxf-WL-JxS">
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CNL-kD-gSr">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                            <items/>
+                                        </toolbar>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -172,9 +201,16 @@
             <point key="canvasLocation" x="832" y="236"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ship_icon_000.png" width="20" height="20"/>
+        <image name="ship_icon_152.png" width="20" height="20"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="EMN-MY-mwM"/>
+    </inferredMetricsTieBreakers>
 </document>

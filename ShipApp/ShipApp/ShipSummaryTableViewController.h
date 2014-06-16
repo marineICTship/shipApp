@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ShipSummaryTableViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UIToolbar *SummaryTB;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *SRButton;
+
 
 @end

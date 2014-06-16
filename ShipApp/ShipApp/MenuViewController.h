@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MenuViewController : UIViewController
+- (IBAction)MRButton:(id)sender;
 
 @end
