@@ -106,7 +106,7 @@
                                     <barButtonItem title="船舶一覧" id="FYS-R3-mo5">
                                         <connections>
                                             <action selector="shipSummary:" destination="BYZ-38-t0r" id="9HC-gr-XZq"/>
-                                            <segue destination="VpE-TV-Yrw" kind="modal" id="RUJ-3m-QY8"/>
+                                            <segue destination="3ul-5v-uxC" kind="modal" id="Lyr-m9-AyB"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="91" style="plain" systemItem="fixedSpace" id="OLa-sv-ubD"/>
@@ -141,6 +141,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-416" y="-324"/>
+        </scene>
+        <!--Ship Summary View Controller-->
+        <scene sceneID="3mI-DV-mad">
+            <objects>
+                <viewController id="3ul-5v-uxC" customClass="ShipSummaryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KNM-IY-6dw"/>
+                        <viewControllerLayoutGuide type="bottom" id="q8W-4Q-9Xh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AFi-V8-SOF">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6VV-Jn-9HN">
+                                <rect key="frame" x="0.0" y="30" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="戻る" id="HcL-d2-eHf">
+                                        <connections>
+                                            <action selector="ReturnButton:" destination="3ul-5v-uxC" id="yrz-ih-POX"/>
+                                            <segue destination="BYZ-38-t0r" kind="modal" id="cST-51-JvP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="B1q-cS-hdt">
+                                <rect key="frame" x="0.0" y="216" width="1024" height="552"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XDX-bg-aiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-336" y="651"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="sgH-o5-kpJ">
@@ -317,7 +356,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61a-DM-chw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="832" y="236"/>
+            <point key="canvasLocation" x="1412" y="56"/>
         </scene>
     </scenes>
     <resources>
@@ -330,6 +369,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="EMN-MY-mwM"/>
+        <segue reference="cST-51-JvP"/>
     </inferredMetricsTieBreakers>
 </document>
