@@ -1,32 +1,23 @@
 //
-//  ShipSummaryViewController.m
-//  ShipApp
+//  ViewController.m
+//  summary
 //
-//  Created by codepro on 2014/06/23.
+//  Created by codepro on 2014/06/24.
 //  Copyright (c) 2014年 FutureUniversityHakodate. All rights reserved.
 //
 
-#import "ShipSummaryViewController.h"
+#import "ViewController.h"
 
-@interface ShipSummaryViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ViewController ()
 
 @end
 
-@implementation ShipSummaryViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@implementation ViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,7 +27,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return 30;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -45,7 +36,7 @@
     if( cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifire];
     }
-    cell.textLabel.text = @"表示する文字";
+    //cell.textLabel.text = @"表示する文字";
     return cell;
 }
 
@@ -54,17 +45,4 @@
     NSLog(@"セクション%dの%d行目",indexPath.section, indexPath.row);
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)ReturnButton:(id)sender {
-}
 @end
