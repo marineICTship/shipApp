@@ -58,6 +58,8 @@
     NSData *shipjson = [NSData dataWithContentsOfFile:path];
     NSDictionary *shipjsonobj = [NSJSONSerialization JSONObjectWithData:shipjson options:0 error:nil];
     
+    //cell.textLabel.text = @"表示する文字";
+    
     //値とキーを、それぞれ配列として取得
     NSArray *kArr = [shipjsonobj allKeys];
     NSArray *vArr = [shipjsonobj allValues];
@@ -71,10 +73,18 @@
     for(id key in[shipjsonobj keyEnumerator]) {
         //NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"mmsi"]);
         //NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"latlng"]);
-        //NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"name"]);
+        NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"name"]);
+        //cell.textLabel.text = (@"%@",shipjsonobj[key][@"name"]);
+        //cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@",shipjsonobj[key][@"name"]];
         
-        //NSMutableArray *nameArry = shipjsonobj[key][@"name"];
-        //NSLog(@"値=[%@]",nameArry[0]);
+        //NSMutableDictionary *nameArry = shipjsonobj[key][@"name"];
+        //NSLog(@"値=[%@]",nameArry[@"name"]);
+    }
+    
+    for (int i = 0;i < kArr.count;i++) {
+        if(indexPath.row == i){
+            cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@",shipjsonobj[kArr[i]][@"name"]];
+        }
     }
 
 
