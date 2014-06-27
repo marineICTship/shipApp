@@ -29,6 +29,7 @@
 		9C6961AC194B0AE900D9FA25 /* ship_icon_000.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6961AA194B0AE900D9FA25 /* ship_icon_000.png */; };
 		9C6961AD194B0AE900D9FA25 /* ship_icon_152.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6961AB194B0AE900D9FA25 /* ship_icon_152.png */; };
 		9CA5621519582E4700149793 /* ShipSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA5621419582E4700149793 /* ShipSummaryViewController.m */; };
+		9CA5625B195C4F0E00149793 /* shipArray_json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CA5625A195C4F0E00149793 /* shipArray_json.txt */; };
 		9CA7EDB91957E9A500B81CA6 /* ships_json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CA7EDB81957E9A500B81CA6 /* ships_json.txt */; };
 		9CA7EDBB1957EB9600B81CA6 /* sample_json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CA7EDBA1957EB9600B81CA6 /* sample_json.txt */; };
 		9CA7EDBD195801FB00B81CA6 /* shipss_json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CA7EDBC195801FB00B81CA6 /* shipss_json.txt */; };
@@ -76,6 +77,7 @@
 		9C6961AB194B0AE900D9FA25 /* ship_icon_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship_icon_152.png; sourceTree = "<group>"; };
 		9CA5621319582E4700149793 /* ShipSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipSummaryViewController.h; sourceTree = "<group>"; };
 		9CA5621419582E4700149793 /* ShipSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShipSummaryViewController.m; sourceTree = "<group>"; };
+		9CA5625A195C4F0E00149793 /* shipArray_json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shipArray_json.txt; sourceTree = "<group>"; };
 		9CA7EDB81957E9A500B81CA6 /* ships_json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ships_json.txt; sourceTree = "<group>"; };
 		9CA7EDBA1957EB9600B81CA6 /* sample_json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample_json.txt; sourceTree = "<group>"; };
 		9CA7EDBC195801FB00B81CA6 /* shipss_json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shipss_json.txt; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				9CA7EDBC195801FB00B81CA6 /* shipss_json.txt */,
 				9CA5621319582E4700149793 /* ShipSummaryViewController.h */,
 				9CA5621419582E4700149793 /* ShipSummaryViewController.m */,
+				9CA5625A195C4F0E00149793 /* shipArray_json.txt */,
 			);
 			path = ShipApp;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				9CA7EDB91957E9A500B81CA6 /* ships_json.txt in Resources */,
 				9C6961AC194B0AE900D9FA25 /* ship_icon_000.png in Resources */,
 				9C5661DD193C566000D9B9E9 /* Images.xcassets in Resources */,
+				9CA5625B195C4F0E00149793 /* shipArray_json.txt in Resources */,
 				9CA7EDBD195801FB00B81CA6 /* shipss_json.txt in Resources */,
 				9C5661D5193C566000D9B9E9 /* Main_iPhone.storyboard in Resources */,
 				9C5661CC193C566000D9B9E9 /* InfoPlist.strings in Resources */,
@@ -442,6 +446,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShipApp/ShipApp-Prefix.pch";
 				INFOPLIST_FILE = "ShipApp/ShipApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -455,6 +460,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShipApp/ShipApp-Prefix.pch";
 				INFOPLIST_FILE = "ShipApp/ShipApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

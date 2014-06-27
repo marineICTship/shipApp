@@ -8,7 +8,12 @@
 
 #import "ShipSummaryViewController.h"
 
-@interface ShipSummaryViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ShipSummaryViewController () <UITableViewDataSource, UITableViewDelegate>{
+    NSDictionary *shipArray;
+}
+
+//
+@property (nonatomic, strong) NSMutableArray *dataArray;
 
 @end
 
@@ -27,6 +32,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+     self.dataArray = [NSMutableArray new];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,8 +42,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return 30;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -45,14 +53,58 @@
     if( cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifire];
     }
-    cell.textLabel.text = @"表示する文字";
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"shipss_json" ofType:@"txt"];
+    NSData *shipjson = [NSData dataWithContentsOfFile:path];
+    NSDictionary *shipjsonobj = [NSJSONSerialization JSONObjectWithData:shipjson options:0 error:nil];
+    
+    //値とキーを、それぞれ配列として取得
+    NSArray *kArr = [shipjsonobj allKeys];
+    NSArray *vArr = [shipjsonobj allValues];
+    
+    //NSArray *kArr2 = [vArr allKeys];
+    //NSArray *vArr2 = [vArr allValues];
+    
+    /*for(int i=0; i < vArr2.count; i++){
+    NSLog(@"キー1[%@] 値=[%@]", kArr[i],vArr[i]);
+    }*/
+    for(id key in[shipjsonobj keyEnumerator]) {
+        //NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"mmsi"]);
+        //NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"latlng"]);
+        //NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"name"]);
+        
+        //NSMutableArray *nameArry = shipjsonobj[key][@"name"];
+        //NSLog(@"値=[%@]",nameArry[0]);
+    }
+
+
+    
+    //文字の色
+    //cell.textLabel.textColor = [UIColor brownColor];
+    //文字サイズ
+    cell.textLabel.font = [UIFont systemFontOfSize:30];
+    //チェックマーク
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *reuseIdentifire = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifire];
+
     //選択されたときに行うこと
     NSLog(@"セクション%dの%d行目",indexPath.section, indexPath.row);
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
 }
+
+/*- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *kCellID = @"cellID";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
+	cell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
+    
+    return cell;
+}*/
 
 /*
 #pragma mark - Navigation
