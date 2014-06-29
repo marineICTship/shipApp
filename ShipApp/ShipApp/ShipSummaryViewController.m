@@ -10,6 +10,7 @@
 
 @interface ShipSummaryViewController () <UITableViewDataSource, UITableViewDelegate>{
     NSDictionary *shipArray;
+    NSArray *check;
 }
 
 //
@@ -67,13 +68,15 @@
     //NSArray *kArr2 = [vArr allKeys];
     //NSArray *vArr2 = [vArr allValues];
     
-    /*for(int i=0; i < vArr2.count; i++){
-    NSLog(@"キー1[%@] 値=[%@]", kArr[i],vArr[i]);
+    /*for(int j=0; j < vArr.count; j++){
+        NSLog(@"%d キー1[%@] 値=[%@]",vArr.count, kArr[j],vArr[j]);
     }*/
+    
+    //NSLog(@"値=[%@]", shipjsonobj[@"Ship"][@"name"]);
     for(id key in[shipjsonobj keyEnumerator]) {
         //NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"mmsi"]);
         //NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"latlng"]);
-        NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"name"]);
+        //NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"name"]);
         //cell.textLabel.text = (@"%@",shipjsonobj[key][@"name"]);
         //cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@",shipjsonobj[key][@"name"]];
         
@@ -86,26 +89,30 @@
             cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@",shipjsonobj[kArr[i]][@"name"]];
         }
     }
-
-
     
     //文字の色
     //cell.textLabel.textColor = [UIColor brownColor];
     //文字サイズ
     cell.textLabel.font = [UIFont systemFontOfSize:30];
     //チェックマーク
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    //cell.accessoryType = UITableViewCellAccessoryCheckmark;
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *reuseIdentifire = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifire];
-
+    //NSString *reuseIdentifire = @"Cell";
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifire];
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     //選択されたときに行うこと
     NSLog(@"セクション%dの%d行目",indexPath.section, indexPath.row);
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
+    if (cell.accessoryType == UITableViewCellAccessoryCheckmark){
+		cell.accessoryType = UITableViewCellAccessoryNone;
+	}else{
+		cell.accessoryType = UITableViewCellAccessoryCheckmark;
+	}
 }
 
 /*- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
