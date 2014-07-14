@@ -1,0 +1,4 @@
+{"ships":[
+{"Ship":{"mmsi":"431000169","imo":"","name":"BUENA VISTA","callsign":"","latitude":"34\u00b042.5689N","longtude":"135\u00b019.9543E","latlng":[34.709481666667,135.33257166667],"speed":0,"course":275,"length":16,"width":5,"flag":1,"timestamp":"2014\/06\/23 13:39:25"}
+,"Ship":{"mmsi":"431000188","imo":"","name":"DAIYU MARU","callsign":"JD2409","latitude":"34\u00b037.3318N","longtude":"135\u00b001.1095E","latlng":[34.622196666667,135.01849166667],"speed":10.2,"course":294,"length":63,"width":10,"flag":1,"timestamp":"2014\/06\/23 13:40:42"}}
+]}
