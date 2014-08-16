@@ -74,7 +74,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCk-0K-Bn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1626" y="-282"/>
+            <point key="canvasLocation" x="-1678" y="-1029"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2pu-G2-OFx">
+            <objects>
+                <viewController id="M8x-ns-Cj2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iqH-rN-Cqg"/>
+                        <viewControllerLayoutGuide type="bottom" id="leD-AQ-heG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eU7-sw-Aua">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZn-Ze-SX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1408" y="-39"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="L4E-Fo-iaT">
+            <objects>
+                <viewController id="VZK-Ya-CeV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kMo-Bn-Guo"/>
+                        <viewControllerLayoutGuide type="bottom" id="RHN-ed-ZSu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gug-cg-MN7">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mrN-PT-8dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-288" y="-102"/>
         </scene>
         <!--View Controller - ViewController-->
         <scene sceneID="tne-QT-ifu">
@@ -140,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-416" y="-324"/>
+            <point key="canvasLocation" x="-448" y="-1094"/>
         </scene>
         <!--Ship Summary View Controller-->
         <scene sceneID="3mI-DV-mad">
@@ -184,11 +220,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDX-bg-aiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-336" y="651"/>
+            <point key="canvasLocation" x="-1714" y="-1910"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="sgH-o5-kpJ">
@@ -310,62 +345,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TYi-A4-vs7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892" y="-973"/>
+            <point key="canvasLocation" x="724" y="-1094"/>
         </scene>
-        <!--Ship Summary Table View Controller-->
-        <scene sceneID="Do0-LM-4P3">
+        <!--View Controller-->
+        <scene sceneID="mgn-nS-NzF">
             <objects>
-                <tableViewController id="VpE-TV-Yrw" customClass="ShipSummaryTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3Ve-vn-jyg">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="V0i-zk-p3M">
-                                <rect key="frame" x="0.0" y="22" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V0i-zk-p3M" id="Nxf-WL-JxS">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CNL-kD-gSr">
-                                            <rect key="frame" x="0.0" y="66" width="1024" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                            <items>
-                                                <barButtonItem title="戻る" id="he7-UF-OBL">
-                                                    <connections>
-                                                        <action selector="SRButton:" destination="VpE-TV-Yrw" id="7p0-1v-cEQ"/>
-                                                    </connections>
-                                                </barButtonItem>
-                                            </items>
-                                        </toolbar>
-                                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fu5-KC-aZt">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                            <items>
-                                                <barButtonItem title="Item" id="fpw-cW-KuR"/>
-                                            </items>
-                                        </toolbar>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="VpE-TV-Yrw" id="gnL-ca-NP4"/>
-                            <outlet property="delegate" destination="VpE-TV-Yrw" id="FZp-Mb-dOs"/>
-                        </connections>
-                    </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="Xv8-MY-QWD"/>
-                        <barButtonItem title="Item" id="JDj-rG-52z"/>
-                    </toolbarItems>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="61a-DM-chw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="YfO-Si-mwJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yXQ-tk-BzT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Te1-Kx-ANG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wUs-H4-jRx">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qe0-y3-H4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1412" y="56"/>
+            <point key="canvasLocation" x="784" y="-89"/>
         </scene>
     </scenes>
     <resources>
