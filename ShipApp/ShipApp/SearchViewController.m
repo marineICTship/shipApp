@@ -39,6 +39,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+//jsonデータ
+- (void)viewWillAppear:(BOOL)animated{
+ NSString *path = [[NSBundle mainBundle] pathForResource:@"shipss_json" ofType:@"txt"];
+ NSData *shipjson = [NSData dataWithContentsOfFile:path];
+ NSDictionary *shipjsonobj = [NSJSONSerialization JSONObjectWithData:shipjson options:0 error:nil];
+ 
+ for(id key in[shipjsonobj keyEnumerator]) {
+ NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"mmsi"]);
+ NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"latlng"]);
+ NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"name"]);
+ }
+ 
+ }
+
+
 /*
 #pragma mark - Navigation
 
