@@ -27,8 +27,11 @@
 		9C6961A9194ABF4700D9FA25 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6961A8194ABF4700D9FA25 /* MenuViewController.m */; };
 		9C6961AC194B0AE900D9FA25 /* ship_icon_000.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6961AA194B0AE900D9FA25 /* ship_icon_000.png */; };
 		9C6961AD194B0AE900D9FA25 /* ship_icon_152.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6961AB194B0AE900D9FA25 /* ship_icon_152.png */; };
+		9C75099E19A4FF5300BFBA3B /* MeshChart.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9C75099D19A4FF5300BFBA3B /* MeshChart.txt */; };
+		9C7509A019A5004900BFBA3B /* MarineChart.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9C75099F19A5004900BFBA3B /* MarineChart.txt */; };
+		9C7509A219A5036800BFBA3B /* FishingNets.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9C7509A119A5036800BFBA3B /* FishingNets.txt */; };
+		9C7509A419A5038000BFBA3B /* boat.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9C7509A319A5038000BFBA3B /* boat.txt */; };
 		9CA5621519582E4700149793 /* ShipSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA5621419582E4700149793 /* ShipSummaryViewController.m */; };
-		9CA5625B195C4F0E00149793 /* shipArray_json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CA5625A195C4F0E00149793 /* shipArray_json.txt */; };
 		9CA7EDB91957E9A500B81CA6 /* ships_json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CA7EDB81957E9A500B81CA6 /* ships_json.txt */; };
 		9CA7EDBB1957EB9600B81CA6 /* sample_json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CA7EDBA1957EB9600B81CA6 /* sample_json.txt */; };
 		9CA7EDBD195801FB00B81CA6 /* shipss_json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CA7EDBC195801FB00B81CA6 /* shipss_json.txt */; };
@@ -72,9 +75,12 @@
 		9C6961A8194ABF4700D9FA25 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		9C6961AA194B0AE900D9FA25 /* ship_icon_000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship_icon_000.png; sourceTree = "<group>"; };
 		9C6961AB194B0AE900D9FA25 /* ship_icon_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship_icon_152.png; sourceTree = "<group>"; };
+		9C75099D19A4FF5300BFBA3B /* MeshChart.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MeshChart.txt; sourceTree = "<group>"; };
+		9C75099F19A5004900BFBA3B /* MarineChart.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MarineChart.txt; sourceTree = "<group>"; };
+		9C7509A119A5036800BFBA3B /* FishingNets.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FishingNets.txt; sourceTree = "<group>"; };
+		9C7509A319A5038000BFBA3B /* boat.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = boat.txt; sourceTree = "<group>"; };
 		9CA5621319582E4700149793 /* ShipSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipSummaryViewController.h; sourceTree = "<group>"; };
 		9CA5621419582E4700149793 /* ShipSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShipSummaryViewController.m; sourceTree = "<group>"; };
-		9CA5625A195C4F0E00149793 /* shipArray_json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shipArray_json.txt; sourceTree = "<group>"; };
 		9CA7EDB81957E9A500B81CA6 /* ships_json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ships_json.txt; sourceTree = "<group>"; };
 		9CA7EDBA1957EB9600B81CA6 /* sample_json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample_json.txt; sourceTree = "<group>"; };
 		9CA7EDBC195801FB00B81CA6 /* shipss_json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shipss_json.txt; sourceTree = "<group>"; };
@@ -158,7 +164,10 @@
 				9CA7EDBC195801FB00B81CA6 /* shipss_json.txt */,
 				9CA5621319582E4700149793 /* ShipSummaryViewController.h */,
 				9CA5621419582E4700149793 /* ShipSummaryViewController.m */,
-				9CA5625A195C4F0E00149793 /* shipArray_json.txt */,
+				9C75099D19A4FF5300BFBA3B /* MeshChart.txt */,
+				9C75099F19A5004900BFBA3B /* MarineChart.txt */,
+				9C7509A119A5036800BFBA3B /* FishingNets.txt */,
+				9C7509A319A5038000BFBA3B /* boat.txt */,
 			);
 			path = ShipApp;
 			sourceTree = "<group>";
@@ -268,15 +277,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C7509A019A5004900BFBA3B /* MarineChart.txt in Resources */,
 				9CA7EDBB1957EB9600B81CA6 /* sample_json.txt in Resources */,
 				9C5661D8193C566000D9B9E9 /* Main_iPad.storyboard in Resources */,
+				9C7509A219A5036800BFBA3B /* FishingNets.txt in Resources */,
+				9C7509A419A5038000BFBA3B /* boat.txt in Resources */,
 				9C6961AD194B0AE900D9FA25 /* ship_icon_152.png in Resources */,
 				9CA7EDB91957E9A500B81CA6 /* ships_json.txt in Resources */,
 				9C6961AC194B0AE900D9FA25 /* ship_icon_000.png in Resources */,
 				9C5661DD193C566000D9B9E9 /* Images.xcassets in Resources */,
-				9CA5625B195C4F0E00149793 /* shipArray_json.txt in Resources */,
 				9CA7EDBD195801FB00B81CA6 /* shipss_json.txt in Resources */,
 				9C5661D5193C566000D9B9E9 /* Main_iPhone.storyboard in Resources */,
+				9C75099E19A4FF5300BFBA3B /* MeshChart.txt in Resources */,
 				9C5661CC193C566000D9B9E9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
