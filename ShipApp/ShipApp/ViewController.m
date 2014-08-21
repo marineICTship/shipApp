@@ -13,25 +13,29 @@
 @end
 
 @implementation ViewController
-@synthesize mapview;
+@synthesize mapView;
+
+
+
 //map_view.delegate = self;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"ship" ofType:@"txt"];
-    NSData *shipjson = [NSData dataWithContentsOfFile:path];
-    NSMutableDictionary *shipjsonobj = [NSJSONSerialization JSONObjectWithData:shipjson options:0 error:nil];
     
-    MKCoordinateRegion region = mapview.region;
+    MKCoordinateRegion region = mapView.region;
     region.center.latitude = 34.551246;
     region.center.longitude = 135.188034;
     region.span.latitudeDelta = 0.5;
     region.span.longitudeDelta = 0.5;
-    [mapview setRegion:region animated:YES];
+    [mapView setRegion:region animated:YES];
     
-    for(int i = 0; i < 138; i++){
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ship" ofType:@"txt"];
+    NSData *shipjson = [NSData dataWithContentsOfFile:path];
+    NSMutableDictionary *shipjsonobj = [NSJSONSerialization JSONObjectWithData:shipjson options:0 error:nil];
+    
+    for(int i = 0; i < 157; i++){
         NSString *lat = (NSString*)shipjsonobj[@"ships"][i][@"Ship"][@"latlng"][0];
         NSString *lon = (NSString*)shipjsonobj[@"ships"][i][@"Ship"][@"latlng"][1];
         NSString *name = (NSString*)shipjsonobj[@"ships"][i][@"Ship"][@"name"];
@@ -46,10 +50,54 @@
         [pin setCoordinate:point];
         pin.title = name;
         pin.subtitle = mmsi;
-        [mapview addAnnotation:pin];
+        [mapView addAnnotation:pin];
         
     }
+    
+    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"boat" ofType:@"txt"];
+    NSData *boatjson = [NSData dataWithContentsOfFile:path1];
+    NSMutableDictionary *boatjsonobj = [NSJSONSerialization JSONObjectWithData:boatjson options:0 error:nil];
+    
+    for(int j = 0; j < 11; j++){
+        NSString *lat = (NSString*)boatjsonobj[@"boats"][j][@"Boat"][@"latlngs"][0][0];
+        NSString *lon = (NSString*)boatjsonobj[@"boats"][j][@"Boat"][@"latlngs"][0][1];
+        NSString *idb = (NSString*)boatjsonobj[@"boats"][j][@"Boat"][@"id"];
+        NSString *time = (NSString*)boatjsonobj[@"boats"][j][@"Boat"][@"timestamp"];
+        
+        MKPointAnnotation *pin1 = [[MKPointAnnotation alloc]init];
+        CLLocationCoordinate2D point1;
+        //point.latitude = 41.842;
+        //point.longitude = 140.7669;
+        point1.latitude = lat.doubleValue;
+        point1.longitude = lon.doubleValue;
+        [pin1 setCoordinate:point1];
+        pin1.title = idb;
+        pin1.subtitle = time;
+        [mapView addAnnotation:pin1];
+        mapView.delegate = self;
+        
+    }
+
 }
+
+/*- (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnocation:(id <MKAnnotation>) Annotation{
+    
+    MKPinAnnotationView *annotationView = (MKPinAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier: @"my_annotaion"];
+    
+    if(annotationView == nil){
+        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation: Annotation reuseIdentifier:@"my_annotaion"];
+    }else{
+        annotationView.annotation = Annotation;
+    }
+    
+    //annotationView.animatesDrop = YES;
+    //annotationView.canShowCallout = YES;
+    annotationView.pinColor = MKPinAnnotationColorPurple;
+    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    
+    return annotationView;
+}*/
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -67,15 +115,15 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-    mapview.showsUserLocation = YES;
+    mapView.showsUserLocation = YES;
     CLLocationCoordinate2D coords[2];
     coords[0] = CLLocationCoordinate2DMake(34.551246, 135.188034);
-    coords[1] = CLLocationCoordinate2DMake(34.58621, 134.15651);
+    coords[1] = CLLocationCoordinate2DMake(36.58621, 136.15651);
     
     MKPolyline *line = [MKPolyline polylineWithCoordinates:coords count:2];
     
     //---線を引く
-    [mapview addOverlay:line];
+    [mapView addOverlay:line];
     
     
 }

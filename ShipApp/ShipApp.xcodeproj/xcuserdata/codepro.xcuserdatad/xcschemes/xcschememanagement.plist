@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>GeoPhoto.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>ShipApp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>9C5661E1193C566000D9B9E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C7509FD19A5E34500BFBA3B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C750A1C19A5E34500BFBA3B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

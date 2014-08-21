@@ -32,6 +32,7 @@
 		9C7509A219A5036800BFBA3B /* FishingNets.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9C7509A119A5036800BFBA3B /* FishingNets.txt */; };
 		9C7509A419A5038000BFBA3B /* boat.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9C7509A319A5038000BFBA3B /* boat.txt */; };
 		9C7509A619A55AD200BFBA3B /* ship.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9C7509A519A55AD200BFBA3B /* ship.txt */; };
+		9C7509A819A58F5900BFBA3B /* ship-stop-icon-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7509A719A58F5900BFBA3B /* ship-stop-icon-10.png */; };
 		9CA5621519582E4700149793 /* ShipSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA5621419582E4700149793 /* ShipSummaryViewController.m */; };
 		9CA7EDB91957E9A500B81CA6 /* ships_json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CA7EDB81957E9A500B81CA6 /* ships_json.txt */; };
 		9CA7EDBB1957EB9600B81CA6 /* sample_json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CA7EDBA1957EB9600B81CA6 /* sample_json.txt */; };
@@ -81,6 +82,21 @@
 		9C7509A119A5036800BFBA3B /* FishingNets.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FishingNets.txt; sourceTree = "<group>"; };
 		9C7509A319A5038000BFBA3B /* boat.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = boat.txt; sourceTree = "<group>"; };
 		9C7509A519A55AD200BFBA3B /* ship.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ship.txt; sourceTree = "<group>"; };
+		9C7509A719A58F5900BFBA3B /* ship-stop-icon-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ship-stop-icon-10.png"; path = "../../../../Desktop/ship-stop-icon-10.png"; sourceTree = "<group>"; };
+		9C750A0419A5E34500BFBA3B /* GeoPhoto-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoPhoto-Info.plist"; sourceTree = "<group>"; };
+		9C750A0619A5E34500BFBA3B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C750A0819A5E34500BFBA3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C750A0A19A5E34500BFBA3B /* GeoPhoto-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoPhoto-Prefix.pch"; sourceTree = "<group>"; };
+		9C750A0B19A5E34500BFBA3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9C750A0C19A5E34500BFBA3B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9C750A0F19A5E34500BFBA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		9C750A1219A5E34500BFBA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		9C750A1419A5E34500BFBA3B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9C750A1519A5E34500BFBA3B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9C750A1719A5E34500BFBA3B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9C750A2519A5E34600BFBA3B /* GeoPhotoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoPhotoTests-Info.plist"; sourceTree = "<group>"; };
+		9C750A2719A5E34600BFBA3B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C750A2919A5E34600BFBA3B /* GeoPhotoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoPhotoTests.m; sourceTree = "<group>"; };
 		9CA5621319582E4700149793 /* ShipSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipSummaryViewController.h; sourceTree = "<group>"; };
 		9CA5621419582E4700149793 /* ShipSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShipSummaryViewController.m; sourceTree = "<group>"; };
 		9CA7EDB81957E9A500B81CA6 /* ships_json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ships_json.txt; sourceTree = "<group>"; };
@@ -118,6 +134,8 @@
 			children = (
 				9C5661C7193C566000D9B9E9 /* ShipApp */,
 				9C5661E9193C566000D9B9E9 /* ShipAppTests */,
+				9C750A0219A5E34500BFBA3B /* GeoPhoto */,
+				9C750A2319A5E34600BFBA3B /* GeoPhotoTests */,
 				9C5661C0193C566000D9B9E9 /* Frameworks */,
 				9C5661BF193C566000D9B9E9 /* Products */,
 			);
@@ -147,6 +165,7 @@
 		9C5661C7193C566000D9B9E9 /* ShipApp */ = {
 			isa = PBXGroup;
 			children = (
+				9C7509A719A58F5900BFBA3B /* ship-stop-icon-10.png */,
 				9C6961AA194B0AE900D9FA25 /* ship_icon_000.png */,
 				9C6961AB194B0AE900D9FA25 /* ship_icon_152.png */,
 				9C5661D0193C566000D9B9E9 /* AppDelegate.h */,
@@ -200,6 +219,50 @@
 			children = (
 				9C5661EB193C566000D9B9E9 /* ShipAppTests-Info.plist */,
 				9C5661EC193C566000D9B9E9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C750A0219A5E34500BFBA3B /* GeoPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				9C750A0B19A5E34500BFBA3B /* AppDelegate.h */,
+				9C750A0C19A5E34500BFBA3B /* AppDelegate.m */,
+				9C750A0E19A5E34500BFBA3B /* Main_iPhone.storyboard */,
+				9C750A1119A5E34500BFBA3B /* Main_iPad.storyboard */,
+				9C750A1419A5E34500BFBA3B /* ViewController.h */,
+				9C750A1519A5E34500BFBA3B /* ViewController.m */,
+				9C750A1719A5E34500BFBA3B /* Images.xcassets */,
+				9C750A0319A5E34500BFBA3B /* Supporting Files */,
+			);
+			path = GeoPhoto;
+			sourceTree = "<group>";
+		};
+		9C750A0319A5E34500BFBA3B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C750A0419A5E34500BFBA3B /* GeoPhoto-Info.plist */,
+				9C750A0519A5E34500BFBA3B /* InfoPlist.strings */,
+				9C750A0819A5E34500BFBA3B /* main.m */,
+				9C750A0A19A5E34500BFBA3B /* GeoPhoto-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C750A2319A5E34600BFBA3B /* GeoPhotoTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C750A2919A5E34600BFBA3B /* GeoPhotoTests.m */,
+				9C750A2419A5E34600BFBA3B /* Supporting Files */,
+			);
+			path = GeoPhotoTests;
+			sourceTree = "<group>";
+		};
+		9C750A2419A5E34600BFBA3B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C750A2519A5E34600BFBA3B /* GeoPhotoTests-Info.plist */,
+				9C750A2619A5E34600BFBA3B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -293,6 +356,7 @@
 				9CA7EDBD195801FB00B81CA6 /* shipss_json.txt in Resources */,
 				9C5661D5193C566000D9B9E9 /* Main_iPhone.storyboard in Resources */,
 				9C75099E19A4FF5300BFBA3B /* MeshChart.txt in Resources */,
+				9C7509A819A58F5900BFBA3B /* ship-stop-icon-10.png in Resources */,
 				9C5661CC193C566000D9B9E9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +433,38 @@
 			isa = PBXVariantGroup;
 			children = (
 				9C5661ED193C566000D9B9E9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C750A0519A5E34500BFBA3B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C750A0619A5E34500BFBA3B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C750A0E19A5E34500BFBA3B /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C750A0F19A5E34500BFBA3B /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		9C750A1119A5E34500BFBA3B /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C750A1219A5E34500BFBA3B /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		9C750A2619A5E34600BFBA3B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C750A2719A5E34600BFBA3B /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

@@ -45,7 +45,7 @@
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 30;
+    return 157;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -55,7 +55,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifire];
     }
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"shipss_json" ofType:@"txt"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ship" ofType:@"txt"];
     NSData *shipjson = [NSData dataWithContentsOfFile:path];
     NSDictionary *shipjsonobj = [NSJSONSerialization JSONObjectWithData:shipjson options:0 error:nil];
     
@@ -84,9 +84,9 @@
         //NSLog(@"値=[%@]",nameArry[@"name"]);
     }
     
-    for (int i = 0;i < kArr.count;i++) {
+    for (int i = 0;i < 157;i++) {
         if(indexPath.row == i){
-            cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@",shipjsonobj[kArr[i]][@"name"]];
+            cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@",shipjsonobj[@"ships"][i][@"Ship"][@"name"]];
         }
     }
     

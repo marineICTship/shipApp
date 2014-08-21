@@ -111,13 +111,17 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ship-stop-icon-10.png" translatesAutoresizingMaskIntoConstraints="NO" id="xkp-uu-C9c">
+                                <rect key="frame" x="167" y="509" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="Toolbar" destination="ltu-fN-Txe" id="JvW-qw-3xa"/>
-                        <outlet property="mapview" destination="ADg-3V-fO9" id="q7N-9j-Nbd"/>
+                        <outlet property="mapView" destination="ADg-3V-fO9" id="Vyb-84-P18"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -330,6 +334,9 @@
             <point key="canvasLocation" x="628" y="-886"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ship-stop-icon-10.png" width="20" height="20"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

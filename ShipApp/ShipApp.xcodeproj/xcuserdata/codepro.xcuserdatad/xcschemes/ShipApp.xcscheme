@@ -38,6 +38,16 @@
                ReferencedContainer = "container:ShipApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9C750A1C19A5E34500BFBA3B"
+               BuildableName = "GeoPhotoTests.xctest"
+               BlueprintName = "GeoPhotoTests"
+               ReferencedContainer = "container:ShipApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
