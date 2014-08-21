@@ -30,5 +30,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *mylabel;
 
+- (IBAction)BoatSwitch:(id)sender;
+@property (weak, nonatomic) IBOutlet UISwitch *BoatSwitch;
+
 
 @end

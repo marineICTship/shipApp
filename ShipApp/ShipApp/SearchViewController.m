@@ -39,6 +39,38 @@
     // Dispose of any resources that can be recreated.
 }
 
+//jsonデータ
+- (void)viewWillAppear:(BOOL)animated{
+ NSString *path = [[NSBundle mainBundle] pathForResource:@"shipss_json" ofType:@"txt"];
+ NSData *shipjson = [NSData dataWithContentsOfFile:path];
+ NSDictionary *shipjsonobj = [NSJSONSerialization JSONObjectWithData:shipjson options:0 error:nil];
+ 
+ for(id key in[shipjsonobj keyEnumerator]) {
+ NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"mmsi"]);
+ NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"latlng"]);
+ NSLog(@"キー1[%@] 値=[%@]", key,shipjsonobj[key][@"name"]);
+ }
+    NSMutableDictionary* ar = [NSMutableDictionary dictionary];
+    ar[@"kpoint"] = [NSMutableDictionary dictionary];
+    ar[@"kpoint"][@"name"] = @"Okinawa Churaumi Aquarium";
+    ar[@"kpoint"][@"symbol"] = @"Whale shark";
+    ar[@"kpoint"][@"geo"] = [NSMutableDictionary dictionary];
+    ar[@"kpoint"][@"geo"][@"latitude"] = @"26.694143";
+    ar[@"kpoint"][@"geo"][@"longitude"] =  @"127.877989";
+    
+    //値とキーを、それぞれ配列として取得
+    NSArray *kArr = [shipjsonobj allKeys];
+    NSArray *vArr = [shipjsonobj allValues];
+    NSMutableArray *vArr2 = [vArr mutableCopy];//コピー
+    
+    for(int j=0; j < vArr.count; j++){
+        //NSLog(@"%d キー1[%@] 値=[%@]",vArr.count, kArr[j],vArr2[j]);
+    }
+    //NSLog(@"%d キー1[%@] 値=[%@]",vArr.count, kArr[0],vArr[1]);
+ 
+ }
+
+
 /*
 #pragma mark - Navigation
 
