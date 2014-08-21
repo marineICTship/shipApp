@@ -36,11 +36,96 @@
     region.span.latitudeDelta = 0.5;
     region.span.longitudeDelta = 0.5;
     [Map2 setRegion:region animated:YES];
+    Map2.delegate = self;
     
     Svalue = 0.0;
-    //mylabel.text = [NSString stringWithFormat:@"表示(薄)"];
-
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ship" ofType:@"txt"];
+    NSData *shipjson = [NSData dataWithContentsOfFile:path];
+    NSMutableDictionary *shipjsonobj = [NSJSONSerialization JSONObjectWithData:shipjson options:0 error:nil];
+    
+    for(int i = 0; i < 157; i++){
+        NSString *lat = (NSString*)shipjsonobj[@"ships"][i][@"Ship"][@"latlng"][0];
+        NSString *lon = (NSString*)shipjsonobj[@"ships"][i][@"Ship"][@"latlng"][1];
+        NSString *name = (NSString*)shipjsonobj[@"ships"][i][@"Ship"][@"name"];
+        NSString *mmsi = (NSString*)shipjsonobj[@"ships"][i][@"Ship"][@"mmsi"];
+        
+        MKPointAnnotation *pin = [[MKPointAnnotation alloc]init];
+        CLLocationCoordinate2D point;
+        //point.latitude = 41.842;
+        //point.longitude = 140.7669;
+        point.latitude = lat.doubleValue;
+        point.longitude = lon.doubleValue;
+        [pin setCoordinate:point];
+        pin.title = name;
+        pin.subtitle = mmsi;
+        [Map2 addAnnotation:pin];
+        
+    }
+    
+    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"boat" ofType:@"txt"];
+    NSData *boatjson = [NSData dataWithContentsOfFile:path1];
+    NSMutableDictionary *boatjsonobj = [NSJSONSerialization JSONObjectWithData:boatjson options:0 error:nil];
+    
+    for(int j = 0; j < 11; j++){
+        NSString *lat = (NSString*)boatjsonobj[@"boats"][j][@"Boat"][@"latlngs"][0][0];
+        NSString *lon = (NSString*)boatjsonobj[@"boats"][j][@"Boat"][@"latlngs"][0][1];
+        NSString *idb = (NSString*)boatjsonobj[@"boats"][j][@"Boat"][@"id"];
+        NSString *time = (NSString*)boatjsonobj[@"boats"][j][@"Boat"][@"timestamp"];
+        
+        MKPointAnnotation *pin1 = [[MKPointAnnotation alloc]init];
+        CLLocationCoordinate2D point1;
+        //point.latitude = 41.842;
+        //point.longitude = 140.7669;
+        point1.latitude = lat.doubleValue;
+        point1.longitude = lon.doubleValue;
+        [pin1 setCoordinate:point1];
+        pin1.title = idb;
+        pin1.subtitle = time;
+        [Map2 addAnnotation:pin1];
+        Map2.delegate = self;
+        
+    }
+    
 }
+-(MKAnnotationView*)mapView:(MKMapView*)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    
+    MKAnnotationView *annotationView;
+    NSString* identifier = @"Pin";
+    annotationView = (MKAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+    if(nil == annotationView) {
+        annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier] ;
+    }
+    annotationView.image = [UIImage imageNamed:@"ship_icon_000.png"];
+    //annotationView.image = [UIImage imageNamed:@"ship-stop-icon-10.png"];
+    annotationView.canShowCallout = YES;
+    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    annotationView.annotation = annotation;
+    
+    return annotationView;
+}
+
+
+
+//線を引くための
+/*[super viewDidLoad];
+CLLocationCoordinate2D transamericaCenter = {37.79520324238053, -122.40283370018005};
+CLLocationCoordinate2D coliseumCenter = {41.890289963005124, 12.492302656173706};
+//CLLocationCoordinate2D points[] = { [37.774929, -122.419416], [40.714353, -74.005973] };
+MKGeodesicPolyline *geodesic;
+geodesic = [MKGeodesicPolyline polylineWithCoordinates:&points[0]
+                                                 count:2];
+[self.Map2 addOverlay:geodesic];*/
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView
+            rendererForOverlay:(id < MKOverlay >)overlay
+{
+    MKPolylineRenderer *renderer =
+    [[MKPolylineRenderer alloc] initWithPolyline:overlay];
+    renderer.strokeColor = [UIColor orangeColor];
+    renderer.lineWidth = 6.0;
+    return renderer;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -97,7 +182,6 @@
 }
 - (IBAction)BoatSwitch:(id)sender {
     
-        // ここを書きました 仲松
         if (self.BoatSwitch.on != YES) {
             [self.WakeSlider setEnabled:NO];
             //mylabel.text = [NSString stringWithFormat:@" "];

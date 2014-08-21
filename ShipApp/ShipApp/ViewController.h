@@ -21,7 +21,9 @@
 }
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
-
+/*@interface MapViewController : UIViewController<MKMapViewDelegate> {
+    MKMapView* mapView;
+}*/
 
 
 - (IBAction)shipSummary:(id)sender;
