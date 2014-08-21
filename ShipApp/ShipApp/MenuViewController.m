@@ -15,7 +15,7 @@
 @end
 
 @implementation MenuViewController
-@synthesize Map2,MarineMapSwitch,MeshSwitch,WakeSlider,mylabel;
+@synthesize Map2,MarineMapSwitch,MeshSwitch,WakeSlider,mylabel,BoatSwitch;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,7 +37,7 @@
     region.span.longitudeDelta = 0.5;
     [Map2 setRegion:region animated:YES];
     
-    Svalue = 1.0;
+    Svalue = 0.0;
     //mylabel.text = [NSString stringWithFormat:@"表示(薄)"];
 
 }
@@ -65,6 +65,7 @@
 }
 
 - (IBAction)MeshSwitch:(id)sender {
+    
 }
 
 - (IBAction)WakeSlider:(id)sender {
@@ -87,13 +88,23 @@
     
     //ラベルに現在値を表示
     if(0 <= Svalue && Svalue < 1){
-        mylabel.text = [NSString stringWithFormat:@"非表示"];
-    }else if(1 <= Svalue && Svalue < 2){
         mylabel.text = [NSString stringWithFormat:@"表示(薄)"];
-    }else if(2 <= Svalue && Svalue < 3){
+    }else if(1 <= Svalue && Svalue < 2){
         mylabel.text = [NSString stringWithFormat:@"表示(中)"];
-    }else if(3 <= Svalue && Svalue < 4){
+    }else if(2 <= Svalue && Svalue < 3){
         mylabel.text = [NSString stringWithFormat:@"表示(濃)"];
     }
+}
+- (IBAction)BoatSwitch:(id)sender {
+    
+        // ここを書きました 仲松
+        if (self.BoatSwitch.on != YES) {
+            [self.WakeSlider setEnabled:NO];
+            //mylabel.text = [NSString stringWithFormat:@" "];
+        }else {
+            self.WakeSlider.enabled = YES;
+
+        }
+    
 }
 @end
