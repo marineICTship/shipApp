@@ -8,13 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet MKMapView *myMap;
-- (IBAction)search:(id)sender;
+@interface ViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+{
+    CLLocationManager *lm;
+    double latitude;
+    double longitude;
+}
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapview;
+
+
 - (IBAction)shipSummary:(id)sender;
 - (IBAction)menu:(id)sender;
 @property (weak, nonatomic) IBOutlet UIToolbar *Toolbar;
 
+//@interface ViewController : UIViewController
 
 @end

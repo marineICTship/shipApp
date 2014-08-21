@@ -76,42 +76,6 @@
             </objects>
             <point key="canvasLocation" x="-1782" y="-647"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="2pu-G2-OFx">
-            <objects>
-                <viewController id="M8x-ns-Cj2" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iqH-rN-Cqg"/>
-                        <viewControllerLayoutGuide type="bottom" id="leD-AQ-heG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="eU7-sw-Aua">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oZn-Ze-SX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1410" y="59"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="L4E-Fo-iaT">
-            <objects>
-                <viewController id="VZK-Ya-CeV" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kMo-Bn-Guo"/>
-                        <viewControllerLayoutGuide type="bottom" id="RHN-ed-ZSu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Gug-cg-MN7">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mrN-PT-8dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-334" y="178"/>
-        </scene>
         <!--View Controller - ViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -125,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ADg-3V-fO9">
-                                <rect key="frame" x="-1" y="77" width="774" height="996"/>
+                                <rect key="frame" x="0.0" y="77" width="774" height="996"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ltu-fN-Txe">
@@ -153,7 +117,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="Toolbar" destination="ltu-fN-Txe" id="JvW-qw-3xa"/>
-                        <outlet property="myMap" destination="ADg-3V-fO9" id="dKy-E1-ZOb"/>
+                        <outlet property="mapview" destination="ADg-3V-fO9" id="q7N-9j-Nbd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -365,24 +329,6 @@
             </objects>
             <point key="canvasLocation" x="628" y="-886"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="mgn-nS-NzF">
-            <objects>
-                <viewController id="YfO-Si-mwJ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yXQ-tk-BzT"/>
-                        <viewControllerLayoutGuide type="bottom" id="Te1-Kx-ANG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wUs-H4-jRx">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qe0-y3-H4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="784" y="-89"/>
-        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -390,6 +336,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="EMN-MY-mwM"/>
+        <segue reference="cST-51-JvP"/>
     </inferredMetricsTieBreakers>
 </document>
