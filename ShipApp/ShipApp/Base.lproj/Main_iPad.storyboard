@@ -111,8 +111,8 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ship-stop-icon-10.png" translatesAutoresizingMaskIntoConstraints="NO" id="xkp-uu-C9c">
-                                <rect key="frame" x="167" y="509" width="20" height="20"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ship_icon_152.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ppk-4U-QgK">
+                                <rect key="frame" x="131" y="505" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>
@@ -345,6 +345,7 @@
     </scenes>
     <resources>
         <image name="ship-stop-icon-10.png" width="20" height="20"/>
+        <image name="ship_icon_152.png" width="20" height="20"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
