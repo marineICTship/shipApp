@@ -39,8 +39,72 @@
     Map2.delegate = self;
     
     Svalue = 0.0;
-
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ship" ofType:@"txt"];
+    NSData *shipjson = [NSData dataWithContentsOfFile:path];
+    NSMutableDictionary *shipjsonobj = [NSJSONSerialization JSONObjectWithData:shipjson options:0 error:nil];
+    
+    for(int i = 0; i < 157; i++){
+        NSString *lat = (NSString*)shipjsonobj[@"ships"][i][@"Ship"][@"latlng"][0];
+        NSString *lon = (NSString*)shipjsonobj[@"ships"][i][@"Ship"][@"latlng"][1];
+        NSString *name = (NSString*)shipjsonobj[@"ships"][i][@"Ship"][@"name"];
+        NSString *mmsi = (NSString*)shipjsonobj[@"ships"][i][@"Ship"][@"mmsi"];
+        
+        MKPointAnnotation *pin = [[MKPointAnnotation alloc]init];
+        CLLocationCoordinate2D point;
+        //point.latitude = 41.842;
+        //point.longitude = 140.7669;
+        point.latitude = lat.doubleValue;
+        point.longitude = lon.doubleValue;
+        [pin setCoordinate:point];
+        pin.title = name;
+        pin.subtitle = mmsi;
+        [Map2 addAnnotation:pin];
+        
+    }
+    
+    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"boat" ofType:@"txt"];
+    NSData *boatjson = [NSData dataWithContentsOfFile:path1];
+    NSMutableDictionary *boatjsonobj = [NSJSONSerialization JSONObjectWithData:boatjson options:0 error:nil];
+    
+    for(int j = 0; j < 11; j++){
+        NSString *lat = (NSString*)boatjsonobj[@"boats"][j][@"Boat"][@"latlngs"][0][0];
+        NSString *lon = (NSString*)boatjsonobj[@"boats"][j][@"Boat"][@"latlngs"][0][1];
+        NSString *idb = (NSString*)boatjsonobj[@"boats"][j][@"Boat"][@"id"];
+        NSString *time = (NSString*)boatjsonobj[@"boats"][j][@"Boat"][@"timestamp"];
+        
+        MKPointAnnotation *pin1 = [[MKPointAnnotation alloc]init];
+        CLLocationCoordinate2D point1;
+        //point.latitude = 41.842;
+        //point.longitude = 140.7669;
+        point1.latitude = lat.doubleValue;
+        point1.longitude = lon.doubleValue;
+        [pin1 setCoordinate:point1];
+        pin1.title = idb;
+        pin1.subtitle = time;
+        [Map2 addAnnotation:pin1];
+        Map2.delegate = self;
+        
+    }
+    
 }
+-(MKAnnotationView*)mapView:(MKMapView*)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    
+    MKAnnotationView *annotationView;
+    NSString* identifier = @"Pin";
+    annotationView = (MKAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+    if(nil == annotationView) {
+        annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier] ;
+    }
+    annotationView.image = [UIImage imageNamed:@"ship_icon_000.png"];
+    //annotationView.image = [UIImage imageNamed:@"ship-stop-icon-10.png"];
+    annotationView.canShowCallout = YES;
+    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    annotationView.annotation = annotation;
+    
+    return annotationView;
+}
+
+
 
 //線を引くための
 /*[super viewDidLoad];
