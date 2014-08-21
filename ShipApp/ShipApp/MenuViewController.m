@@ -36,11 +36,32 @@
     region.span.latitudeDelta = 0.5;
     region.span.longitudeDelta = 0.5;
     [Map2 setRegion:region animated:YES];
+    Map2.delegate = self;
     
     Svalue = 0.0;
-    //mylabel.text = [NSString stringWithFormat:@"表示(薄)"];
 
 }
+
+//線を引くための
+/*[super viewDidLoad];
+CLLocationCoordinate2D transamericaCenter = {37.79520324238053, -122.40283370018005};
+CLLocationCoordinate2D coliseumCenter = {41.890289963005124, 12.492302656173706};
+//CLLocationCoordinate2D points[] = { [37.774929, -122.419416], [40.714353, -74.005973] };
+MKGeodesicPolyline *geodesic;
+geodesic = [MKGeodesicPolyline polylineWithCoordinates:&points[0]
+                                                 count:2];
+[self.Map2 addOverlay:geodesic];*/
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView
+            rendererForOverlay:(id < MKOverlay >)overlay
+{
+    MKPolylineRenderer *renderer =
+    [[MKPolylineRenderer alloc] initWithPolyline:overlay];
+    renderer.strokeColor = [UIColor orangeColor];
+    renderer.lineWidth = 6.0;
+    return renderer;
+}
+
 
 - (void)didReceiveMemoryWarning
 {

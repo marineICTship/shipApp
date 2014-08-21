@@ -79,24 +79,23 @@
     }
 
 }
-
-/*- (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnocation:(id <MKAnnotation>) Annotation{
+-(MKAnnotationView*)mapView:(MKMapView*)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
     
-    MKPinAnnotationView *annotationView = (MKPinAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier: @"my_annotaion"];
-    
-    if(annotationView == nil){
-        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation: Annotation reuseIdentifier:@"my_annotaion"];
-    }else{
-        annotationView.annotation = Annotation;
+    MKAnnotationView *annotationView;
+    NSString* identifier = @"Pin";
+    annotationView = (MKAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+    if(nil == annotationView) {
+        annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier] ;
     }
-    
-    //annotationView.animatesDrop = YES;
-    //annotationView.canShowCallout = YES;
-    annotationView.pinColor = MKPinAnnotationColorPurple;
+    annotationView.image = [UIImage imageNamed:@"ship_icon_000.png"];
+    //annotationView.image = [UIImage imageNamed:@"ship-stop-icon-10.png"];
+    annotationView.canShowCallout = YES;
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    annotationView.annotation = annotation;
     
     return annotationView;
-}*/
+}
+
 
 
 - (void)didReceiveMemoryWarning
