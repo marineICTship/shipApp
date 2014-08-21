@@ -97,7 +97,6 @@
 }
 - (IBAction)BoatSwitch:(id)sender {
     
-        // ここを書きました 仲松
         if (self.BoatSwitch.on != YES) {
             [self.WakeSlider setEnabled:NO];
             //mylabel.text = [NSString stringWithFormat:@" "];
